@@ -1,18 +1,19 @@
 .info-bar {
     position: absolute;
-    top: 50px;
-    right: 20px;
-    width: 250px;
+    top: 0;
+    left: 0; /* Move sidebar to the left */
+    width: 300px; /* Adjust width */
+    height: 100vh; /* Full height */
     background: white;
-    padding: 15px;
-    border: 2px solid #333;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-right: 1px solid #333; /* Creates a visual separation */
     z-index: 1000;
+    overflow-y: auto; /* Allow scrolling if content overflows */
   }
   
   .close {
     background: red;
+    border-radius: 5px;
     color: white;
     border: none;
     padding: 5px 10px;

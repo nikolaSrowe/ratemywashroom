@@ -3,7 +3,7 @@ import { useState } from 'react';
 import L from 'leaflet';
 import tpaper from './assets/tpaper.svg';
 import "./campusMap.css";
-import BuildingInfo from './buildingInfo'; // Ensure capitalization matches file name
+import BuildingInfo from './buildingInfo';
 
 const mapIcon = L.icon({
   iconUrl: tpaper,
@@ -36,31 +36,34 @@ function CampusMap() {
   ];
 
   return (
-    <div className="map-container">
-      <MapContainer
-        center={[49.93952010585304, -119.39585710384094]}
-        zoom={16}
-        maxBounds={bounds}
-        style={{ height: '500px', width: '700px' }}
-      >
-        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-
-        {buildings.map((building, index) => (
-          <Marker
-            key={index}
-            position={building.position}
-            icon={mapIcon}
-            eventHandlers={{
-              click: () => setSelectedBuilding(building),
-            }}
-          >
-            <Popup>{building.name}</Popup>
-          </Marker>
-        ))}
-      </MapContainer>
-
-      {/* Show Sidebar if a Building is Selected */}
+    <div className={`campus-container ${selectedBuilding ? "sidebar-open" : ""}`}>
+      {/* Sidebar for Building Info */}
       {selectedBuilding && <BuildingInfo building={selectedBuilding} onClose={() => setSelectedBuilding(null)} />}
+
+      {/* Map Section */}
+      <div className="map-container">
+        <MapContainer
+          center={[49.93952010585304, -119.39585710384094]}
+          zoom={16}
+          maxBounds={bounds}
+          className="map"
+        >
+          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+
+          {buildings.map((building, index) => (
+            <Marker
+              key={index}
+              position={building.position}
+              icon={mapIcon}
+              eventHandlers={{
+                click: () => setSelectedBuilding(building),
+              }}
+            >
+              <Popup>{building.name}</Popup>
+            </Marker>
+          ))}
+        </MapContainer>
+      </div>
     </div>
   );
 }
