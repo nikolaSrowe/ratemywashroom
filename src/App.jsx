@@ -1,4 +1,5 @@
-import CampusMap from './CampusMap';
+import CampusMap from './campusMap';
+import './App.css';
 
 function App() {
   return (
