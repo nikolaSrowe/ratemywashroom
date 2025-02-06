@@ -14,17 +14,17 @@ const mapIcon = L.icon({
 
 const buildings = [
   { name: "Admin Building", list: "Floor 1, Floor 2", position: [49.939181796093365, -119.39584497325157] },
-  { name: "Art Building", list: "Home to UBCO's creative and fine arts programs.", position: [49.93938954747356, -119.39697324232871] },
-  { name: "Science Building", list: "Where science courses and research take place.", position: [49.94004464267661, -119.39644143688483] },
-  { name: "Fipke", list: "A multipurpose academic building.", position: [49.94065946968649, -119.39646805090713] },
-  { name: "Commons", list: "Student common areas, study spaces, and food services.", position: [49.9403730011134, -119.39532630080429] },
-  { name: "UBCO Library", list: "The main library at UBCO with study spaces and resources.", position: [49.94000004968197, -119.39561220550306] },
-  { name: "EME Building", list: "Engineering, management, and education facilities.", position: [49.93898988446691, -119.39463467231046] },
-  { name: "Arts & Science", list: "A mixed-use academic building for arts and science programs.", position: [49.94015501017497, -119.39778734834991] },
-  { name: "UBCO Gymnasium", list: "Sports and fitness facilities for students and staff.", position: [49.938145973874384, -119.39752120406114] },
-  { name: "UNC Building", list: "The University Centre with services and food courts.", position: [49.94120740497877, -119.39622491774145] },
-  { name: "Nechako", list: "Residence building for students.", position: [49.94171253547814, -119.39606659052077] },
-  { name: "Creative and Critical Studies", list: "A hub for creative writing and cultural studies.", position: [49.939267315866665, -119.39841337977235] }
+  { name: "Art Building", list: "Floor 1, Floor 2, Floor 3", position: [49.93938954747356, -119.39697324232871] },
+  { name: "Science Building", list: "Floor 1, Floor 2, Floor 3", position: [49.94004464267661, -119.39644143688483] },
+  { name: "Fipke", list: "Floor 1, Floor 2", position: [49.94065946968649, -119.39646805090713] },
+  { name: "Commons", list: "Floor 1, Floor 2, Floor 2.5, Floor 3", position: [49.9403730011134, -119.39532630080429] },
+  { name: "UBCO Library", list: "Floor 1, Floor 2, Floor 3", position: [49.94000004968197, -119.39561220550306] },
+  { name: "EME Building", list: "Floor 0, Floor 1, Floor 2", position: [49.93898988446691, -119.39463467231046] },
+  { name: "Arts & Science", list: "Floor 1, Floor 2, Floor 3", position: [49.94015501017497, -119.39778734834991] },
+  { name: "UBCO Gymnasium", list: "Floor 1, Floor 2", position: [49.938145973874384, -119.39752120406114] },
+  { name: "UNC Building", list: "Floor 1, Floor 2, Floor 3", position: [49.94120740497877, -119.39622491774145] },
+  { name: "Nechako", list: "Floor 1, Floor 2", position: [49.94171253547814, -119.39606659052077] },
+  { name: "Creative and Critical Studies", list: "Floor 1, Floor 2", position: [49.939267315866665, -119.39841337977235] }
 ];
 
 function CampusMap() {
