@@ -1,38 +1,63 @@
+/* Campus Header - Smaller & Compact */
+.campus-header {
+  text-align: center;
+  color: black;
+  padding: 8px; /* Reduced padding */
+  /* font-size: 18px;  */
+  font-weight: bold;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 40px; /* Reduced height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+/* Main Container */
 .campus-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    transition: padding-left 0.3s ease-in-out;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: padding-left 0.3s ease-in-out;
+  flex-direction: column;
+}
 
-  .sidebar-open {
-    padding-left: 120px; 
-  }
+/* Adjust Map Section */
+.map-container {
+  margin-top: 45px; /* Adjusted to match header height */
+  width: 700px;
+  height: 500px;
+  transition: margin-left 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
 
-  .map-container {
-    width: 700px; 
-    height: 500px;
-    transition: transform 0.3s ease-in-out;
-  }
+/* Move map when sidebar opens */
+.sidebar-open .map-container {
+  margin-left: 320px; /* Shift map to the right when sidebar opens */
+}
 
-  .map {
-    height: 100%;
-    width: 100%;
-  }
+/* Ensure map fits within adjusted container */
+.map {
+  height: 100%;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
 
-  .leaflet-marker-icon {
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .leaflet-marker-icon:hover {
-    transform: scale(1.2);
-    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
-  }
+/* Leaflet Marker Effects */
+.leaflet-marker-icon {
+  transition: transform 0.2s ease-in-out;
+}
 
-  .leaflet-container {
-    border: 1px solid #3d3d3d;
-    border-radius: 8px;
-  }
-  
+.leaflet-marker-icon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+/* Leaflet Container Styling */
+.leaflet-container {
+  border: 1px solid #3d3d3d;
+  border-radius: 8px;
+}
